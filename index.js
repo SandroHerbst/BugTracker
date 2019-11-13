@@ -5,10 +5,12 @@ const path = require('path')
 app.set('view engine','ejs')
 app.set('views', path.resolve(__dirname, 'views'))
 
-console.log(path.resolve(__dirname, 'views'))
-
 app.get('/',(request, response) => {
-    response.send(request.query)
+    response.render('home')
+})
+
+app.post('/',(request, response) => {
+    response.send('postou')
 })
 
 app.get('/soma', (request, response) => {
