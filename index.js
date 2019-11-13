@@ -30,7 +30,15 @@ app.post('/',(request, response) => {
             console.log('planilha aberta')
             doc.getInfo((err, info) => {
                 const worksheet = info.worksheets[worksheetIndex]
-                worksheet.addRow({name: request.body.name, email: request.body.email}, err => {
+                worksheet.
+                worksheet.addRow(
+                    { name: request.body.name
+                    , email: request.body.email
+                    , issueType: request.body.issueType
+                    , howToReproduce: request.body.howToReproduce
+                    , expectedOutput: request.body.expectedOutput
+                    , receivedOutput: request.body.receivedOutput
+                    }, err => {
                     response.send('bug reportado com sucesso')
                 })
             })
