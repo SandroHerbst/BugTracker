@@ -50,6 +50,6 @@ app.listen(3000, (err) => {
     if (err) {
         console.log('aconteceu um erro', err)
     } else {
-        console.log('bugtracker rodando na porta 3000')
+        console.log('bugtracker rodando em http://localhost:3000')
     }
 })
