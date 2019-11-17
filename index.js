@@ -60,7 +60,7 @@ app.post("/", async (request, response) => {
         await sgMail.send(msg)
     }
 
-    response.send("bug reportado com sucesso");
+    response.render('sucesso')
 
   } catch (err) {
     response.send('Erro ao enviar o formulário.')
