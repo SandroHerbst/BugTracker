@@ -50,7 +50,7 @@ app.post("/", async (request, response) => {
         sgMail.setApiKey(sendGridKey)
         const msg = {
             to: 'sandro.herbst@gmail.com',
-            from: 'sandro@programaleiloes.com',
+            from: 'sandro.herbst@gmail.com',
             subject: 'BUG Critico reportado',
             text: `
                 O usuário ${request.body.name} reportou um problema.
