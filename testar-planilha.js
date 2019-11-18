@@ -3,7 +3,7 @@ const credentials = require('./bugtracker.json')
 const {promisify} = require('util')
 
 const addRowToSheet = async() => {
-    const doc = new GoogleSpreadsheet('1c3pwSVjWcoIbXq2thIvvDSVms0HD5v-HseZ90WKf44A')
+    const doc = new GoogleSpreadsheet('aqui_vai_o_id_do_doc')
     await promisify(doc.useServiceAccountAuth)(credentials)
     console.log('planilha aberta')
     const info = await promisify(doc.getInfo)()
@@ -15,7 +15,7 @@ addRowToSheet()
 
 
 /*
-const doc = new GoogleSpreadsheet('1c3pwSVjWcoIbXq2thIvvDSVms0HD5v-HseZ90WKf44A')
+const doc = new GoogleSpreadsheet('aqui_vai_o_id_do_doc')
 doc.useServiceAccountAuth(credentials, (err) => {
     if(err) {
         console.log('não foi possível abrir a planilha')
