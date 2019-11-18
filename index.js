@@ -11,9 +11,9 @@ const sgMail = require('@sendgrid/mail')
 
 
 //config
-const docId = '1c3pwSVjWcoIbXq2thIvvDSVms0HD5v-HseZ90WKf44A'
+const docId = 'aqui_vai_o_id_do_doc'
 const worksheetIndex = 0
-const sendGridKey = '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'
+const sendGridKey = 'aqui_vai_a_chave_do_send_grid'
 
 app.set('view engine','ejs')
 app.set('views', path.resolve(__dirname, 'views'))
